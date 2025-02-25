@@ -29,15 +29,10 @@ function sortearAmigo(){
         alert("Você precisa adicionar nomes a serem sorteados !");
     }else if(amigos.length == 1){
         alert("Você precisa adicionar mais de um nome para sortear !");
+    }else{
+        sorteado = amigos[Math.floor(Math.random() * amigos.length)];
+        resultado = document.getElementById("resultado");
+        resultado.innerHTML = "O nome sorteado é: " + sorteado;
     }
-    
-
-    sorteado = amigos[Math.floor(Math.random() * amigos.length)];
-
-    console.log(sorteado);
-
-    resultado = document.getElementById("resultado");
-    resultado.innerHTML = "O nome sorteado é: " + sorteado;
-
 }
 
